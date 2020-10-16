@@ -1,0 +1,23 @@
+<table>
+    <thead>
+    <th>Title</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Location</th>
+    <th>Loaction Name</th>
+    <th>Price</th>
+    </thead>
+    <tbody>
+      <meta charset="UTF-8">
+      {% for show in show_details %}
+        <tr>
+            <td>{{ show.title}}</td>
+            <td>{{ show.startTime}}</td>
+            <td>{{ show.endTime}}</td>
+            <td>{{ show.location}}</td>
+            <td>{{ show.locationName}}</td>
+            <td>{{ show.price}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
