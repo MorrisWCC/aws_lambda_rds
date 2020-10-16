@@ -1,0 +1,18 @@
+app: aws-python-rest-api
+service: aws-python-rest-api
+
+provider:
+  name: aws
+  runtime: python3.7
+  timeout: 29
+
+functions:
+  search:
+     handler: handler.search
+     events:
+       - http:
+           path: /search
+           method: post
+           cors: true
+plugins:
+  - serverless-python-requirements
